@@ -16,9 +16,9 @@
     <%= form.text_field :book_title %>
   </div>
 
-  <%= fields_for(@author_book) do |ab| %>
+  <%= fields_for(@author_book) do |author| %>
   <div class="field">
-    <%= ab.label "All Authors" %>
+    <%= author.label "All Authors" %>
     <%= collection_select(:authors, :id, @all_authors, :id, :first_name, {}, {:multiple => true}) %>
   </div>
     <% end %>
